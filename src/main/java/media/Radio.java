@@ -7,6 +7,15 @@ private double fmFrequency;
 private int amFrequency;
 private char band;
 
+public Radio(){
+}
+
+public Radio (double fmFrequency, int amFrequency, char band){
+this.amFrequency = amFrequency;
+this.fmFrequency = fmFrequency;
+this.band = band;
+}
+
 public double getFmFrequency(){
 return fmFrequency;
 }
@@ -24,6 +33,12 @@ return band;
 }
 public void setBand (char band){
 this.band = band;
+}
+public void info(){
+
+    System.out.println("FM frekvencija: " +  getFmFrequency());
+    System.out.println("AM frekvencija: " + getAmFrequency());
+    System.out.println("Trenutni talas: " +  getBand());
 }
 
 }
